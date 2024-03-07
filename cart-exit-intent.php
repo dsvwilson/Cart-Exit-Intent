@@ -8,8 +8,6 @@
  * Requires PHP:      7.2
  * Author:            National Financial Educators Council
  * Author URI:        https://www.financialeducatorscouncil.org/
- * License:           GPL v2 or later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 
