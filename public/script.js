@@ -73,9 +73,9 @@ if ( checkURLPath === '/checkout/' && productName !== null ) {
 
 /*
     'condSignUpFee()' is a function used to dynamically include text if the product has a sign up fee.
-    This helps us to be flexible in the campaign output. If there is no sign up fee, it will include a 
+    This helps us to be flexible in the campaign output. If there is a sign up fee, it will include a 
     defined sign up fee text to the text that will be sent to the campaign. If there is no sign up fee,
-    then nothing is returned. 
+    nothing is returned. 
 */
 
 function condSignUpFee() {
@@ -111,7 +111,7 @@ document.addEventListener( 'DOMContentLoaded', () => { // ensures the DOM is ful
 
     // inputs the text to the campaign on the frontend
 
-    document.getElementById( 'test-target' ).innerHTML = '<p>You opted to buy ' + connectJSFile.getProductName + 
+    document.getElementById( 'campaign' ).innerHTML = '<p>You opted to buy ' + connectJSFile.getProductName + 
     ' for ' + connectJSFile.getProductPrice + signUpFeeData + ' and will be spending a total of ' + 
     connectJSFile.getCartTotal + ' today. We are excited to see you get started.</p>' + 
     '<p>Have any questions about what your purchase might mean to you? Let us know!</p>';
