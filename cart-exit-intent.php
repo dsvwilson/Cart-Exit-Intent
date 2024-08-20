@@ -3,7 +3,7 @@
 /*
  * Plugin Name:       Cart Exit Intent
  * Description:       Adds dynamic cart data to OptinMonster Cart Exit campaigns and aids the data to be sent to AWeber.
- * Version:           1.0
+ * Version:           1.2
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            National Financial Educators Council
@@ -76,8 +76,11 @@ function cei_main() {   // Start of code
 
         // enqueues the script and style files
 
-        wp_enqueue_script( 'connect-script-js', $cei_plugin_url_arr['getScriptJs'], array(), '1.0.0', true );
+        wp_enqueue_script( 'connect-script-js', $cei_plugin_url_arr['getScriptJs'], array(), '1.0.0', false );
         wp_enqueue_style( 'connect-style-css', $cei_plugin_url_arr['getStyleCss'], array(), '1.0.0' );
+
+        // Localize the script after enqueueing
+        cei_localize_script();
 
     }
 
